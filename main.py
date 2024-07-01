@@ -1,4 +1,4 @@
 
 print("Hello world")   
 
-# add admin update file
+print("Otor is a Galacticos")
