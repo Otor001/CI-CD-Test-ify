@@ -1,0 +1,13 @@
+name: Github Actions Demo
+on: [ pull-request ]
+jobs:
+  Tests: 
+    runs-on: ${{ matrix.os }}
+    strategy:
+     matrix:
+      os: [ ubuntu-latest, windows-latest, macos-latest, androidos-latest ]
+    steps: 
+      - uses: actions/checkout@v2
+      - run: echo "The job was automatically triggered by a ${{github.event_name}} event. "
+      - run: python main.py
+      - run: python Test.py 
