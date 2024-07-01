@@ -1,5 +1,5 @@
 name: Github Actions Demo
-on: [ pull-request ]
+on: [ pull_request ]
 jobs:
   Tests: 
     runs-on: ${{ matrix.os }}
