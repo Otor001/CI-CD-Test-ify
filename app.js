@@ -19,12 +19,26 @@
 
 //const logic = age ===12 || userName === 'victory'  
 
-const age = 50
+//const age = 50
 
-if(age>=32 ) {
-    console.log('You are eligible to vote')
-} else {
-    console.log('You are too young to vote')
-}
+//if(age>=32 ) {
+    //console.log('You are eligible to vote')
+//} else {
+    //console.log('You are too young to vote')
+//}
   
+//for(let number = 1;number <=20; number = number+1) {
+    //if(number % 2 === 0) {
+        //console.log(number +' is an even number') 
+    //} else {
+        //console.log(number +' is an odd number')
+    //}
+
+    const myObject = {
+        name: 'book',
+        Author: 'things fall apart',
+        pages: 500
+    }
+
+    console.log(myObject)
 
