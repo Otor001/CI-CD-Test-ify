@@ -40,5 +40,21 @@
         pages: 500
     }
 
-    console.log(myObject)
+    
+    const book = {
+        isopen:false,
+        Author:'things fall apart',
+        pages: 500,
+        toggleOpenAndClose: function(){
+            if(book.isOpen===true) {
+                book.isOpen =false
+            } else {
+                book.isOpen = true
+            }
+        }
+    }
+    book.toggleOpenAndClose()
+    console.log(book.isOpen)
+
+    
 
