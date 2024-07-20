@@ -36,25 +36,49 @@
 
     const myObject = {
         name: 'book',
-        Author: 'things fall apart',
-        pages: 500
+        Author: 'otor emmanuel',
+        title: 'things fall apart',
+        pages: 500 [
+            {
+                name: 'book',
+                Author: 'chimamanda',
+                title: 'half of a yellow sunrise',
+                pages: 350,  
+            },
+            {
+                name: 'book',
+                Author: 'nwosu',
+                title: 'tells by moonlight',
+                pages: 420,  
+            },
+            {
+                name: 'book',
+                Author: 'chika',
+                title: 'superstory',
+                pages: 250,  
+            }
+        ],
     }
 
     
     const book = {
-        isopen:false,
-        Author:'things fall apart',
+        isopen:true,
+        Author:'otor emmanuel',
         pages: 500,
         toggleOpenAndClose: function(){
-            if(book.isOpen===true) {
-                book.isOpen =false
+            if(book.isopen===true) {
+                book.isopen =true
             } else {
-                book.isOpen = true
-            }
-        }
+                book.isopen = true
+            }  
+        },
     }
     book.toggleOpenAndClose()
-    console.log(book.isOpen)
+    console.log(book)
+
+    for(let book = 1; book <=3 ; book = book+1) {
+        console.log(book +' book')
+    }
 
     
 
