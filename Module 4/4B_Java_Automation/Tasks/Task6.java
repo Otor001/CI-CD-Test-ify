@@ -13,8 +13,8 @@ public class Task6 {
 
 
         // Print the result
-        //System.out.println("Reversed string: " + reversed);
-       // System.out.println("Extracted word: " + extracted);
+        System.out.println("Reversed string: " + reversed);
+        System.out.println("Extracted word: " + extracted);
     }
 }
 
