@@ -11,9 +11,10 @@ public class Task6 {
         // Extract the substring "COME" from the reversed string
         String extracted = reversed.substring(1, 5);  // "COME" is found from index 1 to 4
 
+
         // Print the result
-        System.out.println("Reversed string: " + reversed);
-        System.out.println("Extracted word: " + extracted);
+        //System.out.println("Reversed string: " + reversed);
+       // System.out.println("Extracted word: " + extracted);
     }
 }
 
