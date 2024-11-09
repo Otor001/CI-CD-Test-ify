@@ -1,35 +1,37 @@
-package Tasks;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.Scanner;
+public class Task10 {
+    // Navigate to https://jqueryui.com/
+    // Click on the dialog menu from the left pane
+    // Click on the close icon to close the dialogue box in the middle
 
-public class Task10  {
-    // Method to verify the user's intent
-    public static void verifyVisitor() {
-        // Create a Scanner object to take input from the user
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Public\\Downloads\\SeleniumWebDriver\\src\\chromedriver-win64\\chromedriver.exe");
 
-        // Ask the user to enter the word
-        System.out.print("Why are you here? Please enter the reason: ");
-        String userInput = scanner.nextLine();  // Read user input
+        // Launch browser
+        WebDriver driver = new ChromeDriver();
 
-        // Verify if the input is "Testify"
-        if (userInput.equalsIgnoreCase("Testify")) {
-            // Print welcome message
-            System.out.println("Welcome to Testify Trainings! We're glad to have you.");
-        } else {
-            // Print rejection message
-            System.out.println("Sorry, you're not allowed in this channel.");
-        }
+        // Maximize the browser
+        driver.manage().window().maximize();
 
-        // Close the scanner to avoid resource leaks
-        scanner.close();
-    }
+        // Navigate to the Url
+        driver.get("https://jqueryui.com/");
+        Thread.sleep(5000);
 
-    // Main method
-    public static void main(String[] args) {
+        // Click on the "Dialog" menu from the left pane
+        WebElement dialogLink = driver.findElement(By.linkText("Dialog"));
+        dialogLink.click();
+        Thread.sleep(5000);
 
-        // Call the verifyVisitor method
-        verifyVisitor();
+        // Click on the close icon to close the dialog box
+        WebElement closeButton = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
+        closeButton.click();
+        Thread.sleep(5000);
+
+        //Close the Browser
+        driver.quit();
     }
 }
-
